@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-Universe-hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/097d26a8e6.js" crossorigin="anonymous"></script>
+    <style>
+        .details-button {
+            border-style: none;
+            background-color: white;
+            color: brown;
+        }
+
+        .btn-close {
+            background-color: brown;
+            padding: 15px;
+            border-radius: 50px;
+            position: absolute;
+            top: -20px;
+            right: -15px;
+        }
+
+        .accuracy {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: brown;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div style="position: relative;" class="modal-dialog modal-xl modal-dialog-centered p-5">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="d-lg-flex  align-items-center">
+                        <div class="border border-danger rounded m-3">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+
+                            </div>
+                            <div class="modal-body d-lg-flex justify-content-around text-center">
+
+                                <div class="bg-light p-2 rounded text-primary fw-semibold" id="price1"></div>
+
+                                <div class="bg-light p-2 rounded text-danger fw-semibold" id="price2"></div>
+
+                                <div class="bg-light p-2 rounded text-info fw-semibold" id="price3"></div>
+                            </div>
+                            <div class="mt-4 d-lg-flex justify-content-around">
+                                <div class="ps-lg-3">
+                                    <h4>Features</h4>
+                                    <div id="features"></div>
+
+                                </div>
+                                <div>
+                                    <h4>Integrations</h4>
+                                    <div id="Integrations"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="position: relative;" class="m-2">
+
+                            <div class="accuracy" id="accuracy">
+                            </div>
+
+                            <div id="modal-image-container">
+                            </div>
+
+                            <div class="text-center mt-3" id="text-container"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container">
+            <!-- Head Line -->
+            <div class="text-center mt-4">
+                <h1>Ai-Universe-Hub</h1>
+                <div id="sortByDate" class="btn btn-danger mt-3">Sort By Date</div>
+            </div>
+
+            <!-- Spinner  -->
+            <div id="spinner" style="height: 160px;" class="d-flex justify-content-center align-items-center d-none">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Card container -->
+            <div id="card-container" class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            </div>
+
+
+
+            <!-- See More Button -->
+            <div id="see-more" class="text-center mt-3 d-none">
+                <div id="see-more-btn" class="btn btn-danger">See More</div>
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="api.js"></script>
+</body>
+
+</html>
